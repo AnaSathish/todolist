@@ -1,4 +1,6 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# This is a Todo List where users can add to new items to the list, check them off, and delete them from their list as well.
+
+## This app was made using React, below are commands to work with this project.
 
 ## Available Scripts
 
