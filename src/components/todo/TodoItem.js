@@ -1,8 +1,12 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import {v4 as uuidv4} from 'uuid'; // to generate unique ids for all todos
 
 
 export class TodoItem extends Component {
+    state = {
+        notes: [] //keep all the notes you have
+    }
     // dynamic styling
     getStyle = () => {
         return {
@@ -12,7 +16,15 @@ export class TodoItem extends Component {
             textDecoration: this.props.todo.completed ? 'line-through' : 'none'
         }
     }
-o
+
+    addNote = (note) => {
+        const newNote = {
+            id: uuidv4(),
+            note: note
+        }
+        this.setState({notes: [...this.state.notes, newNote]})
+    }
+
     render() {
         // destructuring ~ so we don't need to do this.props everytime
         const { id, title } = this.props.todo;
@@ -23,7 +35,8 @@ o
                     {title}
                     <button onClick={this.props.delTodo.bind(this, id)} style={btnStyle}>X</button>
                 </p>
-            </div>
+             </div>
+             
         )
     }
 }
@@ -36,7 +49,7 @@ TodoItem.propTypes = {
 
 
 const btnStyle = {
-    background: '#ff0000',
+    background: '#4dc8e9',
     color: '#fff',
     border: 'none',
     padding: '5px 9px',
