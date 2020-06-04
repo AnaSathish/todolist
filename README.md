@@ -1,6 +1,6 @@
 #### This is a Todo List where users can add new items to their list, check them off, and delete them from their list as well.
 
-#### This app was made using React, below are commands to work with this project.
+#### This app was made using React. Below are commands to work with this project.
 
 ## Available Scripts
 
